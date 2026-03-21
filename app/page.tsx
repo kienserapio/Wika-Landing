@@ -8,26 +8,12 @@ export default function Home() {
         <div className="flex items-center">
           <img src="/navlogo.png" alt="WIKA" className="h-8 md:h-10" />
         </div>
-        {/* <div className="hidden items-center gap-8 font-headline font-bold tracking-tight md:flex">
-          <a className="text-on-background transition-colors hover:text-primary" href="#">
-            Method
-          </a>
-          <a className="text-on-background transition-colors hover:text-primary" href="#">
-            Courses
-          </a>
-          <a className="text-on-background transition-colors hover:text-primary" href="#">
-            Schools
-          </a>
-          <a className="text-on-background transition-colors hover:text-primary" href="#">
-            About
-          </a>
-        </div> */}
         <Button asChild className="wika-active rounded-button bg-primary px-6 py-2.5 font-headline font-bold text-white transition-all" variant="primary">
           <Link href="/join">Join Waitlist</Link>
         </Button>
       </nav>
 
-      <header className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 pb-20 pt-32 lg:flex-row">
+      <header id="hero" className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 pb-20 pt-32 lg:flex-row">
         <div className="space-y-8 lg:w-1/2">
           <img src="/LOGO_V1%202.png" alt="Wika logo" className="h-10 w-auto opacity-95" />
           <h1 className="font-headline font-extrabold leading-tight tracking-tight text-primary">
@@ -41,26 +27,6 @@ export default function Home() {
             <Button asChild className="wika-active flex items-center justify-center gap-2 rounded-button bg-primary px-8 py-4 text-md font-headline font-bold text-white tracking-wide" variant="primary" size="lg">
               <Link href="/join">BECOME A WIKA PIONEER</Link>
             </Button>
-          </div>
-          <div className="flex items-center gap-4 pt-6">
-            <div className="flex -space-x-3">
-              <img
-                alt="User avatar"
-                className="h-10 w-10 rounded-full border-2 border-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA03dgu6VIfbxfp9unuL3P3LA_h_HDpoOuk-nEcomn6npRefrB37KHV6SjclV9JCdYfNbn34XHgifD0Iv3JV-Qntln-w_qa_IhyetnioFfU7idrF8kWcd8pKMGffxEjmArbpawor57cvzbPnIVcrhYL2CL9fD5LTfky2X6mBTPNxvq5AzcxMa3c98mWRRr8YA--HhywwMbcKO-l0QljJnCOGMchavumEst2LF1QoayXMA7Gp-sM6TPZy47Id9t4YSKbxL2yBTWO54XA"
-              />
-              <img
-                alt="User avatar"
-                className="h-10 w-10 rounded-full border-2 border-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz5tVzp93Ul9XUrYasevA9oO5vj_nmSH3oKkf4xPtVFO7yiiLO0ZCciYphxDK7V2BTEBqV9NPeXssztMAr7HlhjOtK1ruRaVcLn_FfHdUBFJPsz0itrvZRjg6jW3jlMqfywpo9iPuFAn5bDPsHQB-FMoRdhfmUWt6E9ehMLsxgigvw5VZtCs6LwtsLwUZWJQPRbtW8IjWv-PT-FZqOCVMne_gBHexLGTPP6J51rXzLzanI_cd9W4GDLxkadgfpumpeVG1lT9xkfLYp"
-              />
-              <img
-                alt="User avatar"
-                className="h-10 w-10 rounded-full border-2 border-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABbon9unXPcppxrRzHU0LATivx8HTNljeATQW0vAaGvgXFZsVOVFOK-HNECu1xcwSlyAnh49ECKYNOtF5bGQjBNFL1SLjcPGZJb5sSwjZZp4dlM6MYn4S6ZpevK2VCjf8fre8jdJvfKNzK2XsLE8i81DWH7csjWR_EAN9-DB69TC-P5LmRUCPrRxSPQ8q7BXk_4nJjSci9eaXWxaJ35i9h5kFxVjRDY5veblocfEvMs3st9NSk1E6Ypy3vegvtV4OWIJ4IpNzgK-JO"
-              />
-            </div>
-            <p className="font-label text-sm font-bold text-on-background/60">Join 5,000+ Filipinos worldwide</p>
           </div>
         </div>
 
@@ -113,18 +79,18 @@ export default function Home() {
                     <img src="/dialecto_icon.png" alt="Dialecto" className="h-10 w-10 object-contain" />
                   </div>
                   <div className="wika-shadow-white rounded-2xl rounded-tl-none border border-surface-border bg-white p-4 font-medium text-on-background pop-slide">
-                    Kumusta! I&apos;m Dialecto. Want to practice ordering coffee in Tagalog today?
+                    Kumusta! I&apos;m Dialecto. Want to practice ordering coffee in Cebuano today?
                   </div>
                 </div>
                 <div className="mb-6 flex items-end justify-end gap-4">
                   <div className="wika-shadow rounded-2xl rounded-br-none bg-primary p-4 font-medium text-white text-on-primary pop-slide-iphone">
-                    Opo! Gusto ko ng isang mainit na kape.
+                    Oo! Gusto ko ug init nga kape.
                   </div>
                 </div>
                 <div className="flex items-center gap-3 rounded-xl border-2 border-dashed border-secondary bg-secondary/10 p-4">
                   <span className="material-symbols-outlined text-secondary-dark">tips_and_updates</span>
                   <p className="text-sm font-bold italic text-secondary-deep">
-                    Cultural Tip: Using &quot;Opo&quot; shows respect to the barista!
+                    Cultural Tip: Using &quot;Opo&quot; shows respects to elders.
                   </p>
                 </div>
               </div>
@@ -138,11 +104,13 @@ export default function Home() {
                 Practice real-world conversations without the fear of making mistakes. Dialecto doesn&apos;t just
                 translate-it teaches you the cultural nuances, honorifics, and local slang.
               </p>
-              <Button className="group flex items-center gap-2 font-headline font-extrabold text-primary" variant="ghost">
-                Be a Validator
-                <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
-                  arrow_forward
-                </span>
+              <Button asChild className="group inline-flex items-center gap-2 font-headline font-extrabold text-primary" variant="ghost">
+                <Link href="#hero">
+                  Be a Validator
+                  <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
+                    arrow_forward
+                  </span>
+                </Link>
               </Button>
             </div>
           </div>
@@ -186,14 +154,14 @@ export default function Home() {
               </div>
               <div className="wika-shadow-white hover:rotate-0 cursor-pointer transform rounded-[24px] border border-surface-border bg-white p-6 rotate-6 transition-all">
                 <div className="mb-4 text-4xl">🏆</div>
-                <h4 className="mb-1 text-xl font-black text-primary">Diamond League</h4>
+                <h4 className="mb-1 text-xl font-black text-primary">DIAMOND LEAGUE</h4>
                 <p className="text-xs font-bold text-on-background/60 uppercase">Top 5% Student</p>
               </div>
               <div className="col-span-2 cursor-pointer transform -rotate-6 transition-all hover:scale-105">
                 <div className="wika-shadow-secondary rounded-[24px] bg-secondary p-6 wika-float">
                   <div className="flex items-center justify-between text-white">
                     <div>
-                      <h4 className="mb-1 text-2xl font-headline font-black">Special Achievement</h4>
+                      <h4 className="mb-1 text-2xl font-headline font-black">SPECIAL ACHIEVEMENT</h4>
                       <p className="text-sm font-bold opacity-80 uppercase">The &quot;Po&quot; &amp; &quot;Opo&quot; Master</p>
                     </div>
                     <span className="text-5xl">🎖️</span>
@@ -258,9 +226,9 @@ export default function Home() {
       <section className="bg-white px-6 py-24">
         <div className="wika-shadow-lg relative mx-auto max-w-4xl overflow-hidden rounded-[40px] bg-primary p-12 text-center text-white">
           <div className="relative z-10 space-y-8">
-            <h2 className="font-headline text-4xl leading-tight font-black md:text-6xl">
-              Ready to speak Filipino <br />
-              with confidence?
+            <h2 className="font-headline text-3xl leading-tight font-black md:text-5xl">
+              Ready to speak our Filipino <br />
+              languages with confidence?
             </h2>
             <p className="text-xl font-medium opacity-90">Be among the first to experience the future of cultural learning.</p>
             <div className="flex flex-col justify-center gap-6 pt-4 sm:flex-row">
@@ -281,32 +249,31 @@ export default function Home() {
       <footer className="border-t border-surface-border bg-white px-6 py-12">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex flex-col items-center gap-4 md:items-start">
-            <div className="font-headline text-lg font-bold text-primary">WIKA</div>
+            <img src="/LOGO_V1%202.png" alt="Wika logo" className="h-8 w-auto" />
             <p className="text-center font-body text-sm text-on-background/60 md:text-left">
               © 2026 WIKA Philippines. Made for Filipino Languages.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a className="font-body text-sm text-on-background/60 transition-opacity hover:text-primary" href="#">
-              Privacy Policy
-            </a>
-            <a className="font-body text-sm text-on-background/60 transition-opacity hover:text-primary" href="#">
-              Terms of Service
-            </a>
-            <a className="font-body text-sm text-on-background/60 transition-opacity hover:text-primary" href="#">
-              Contact Us
-            </a>
-            <a className="font-body text-sm text-on-background/60 transition-opacity hover:text-primary" href="#">
-              Careers
-            </a>
-          </div>
+          <p className="text-center font-body text-sm font-bold text-on-background/70 md:text-left">Contact us at marketing@wikaph.com</p>
           <div className="flex gap-4">
-            <div className="wika-shadow-white wika-active-white flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-surface-border bg-white text-primary">
-              <span className="material-symbols-outlined text-lg">public</span>
-            </div>
-            <div className="wika-shadow-white wika-active-white flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-surface-border bg-white text-primary">
-              <span className="material-symbols-outlined text-lg">share</span>
-            </div>
+            <a
+              href="https://facebook.com/WikaPhilippines"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wika Facebook"
+              className="wika-shadow-white wika-active-white flex h-10 cursor-pointer items-center justify-center rounded-full border border-surface-border bg-white px-4 text-sm font-black text-primary"
+            >
+              f
+            </a>
+            <a
+              href="https://linkedin.com/company/wikaph"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wika LinkedIn"
+              className="wika-shadow-white wika-active-white flex h-10 cursor-pointer items-center justify-center rounded-full border border-surface-border bg-white px-4 text-xs font-black text-primary"
+            >
+              in
+            </a>
           </div>
         </div>
       </footer>
