@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String
+  location    String
+  roles       String[]
+  dialect     String?
+  proficiency String?
+  createdAt   DateTime @default(now())
+}
+
+model PioneerApplication {
+  id                  String   @id @default(cuid())
+  firstName           String
+  lastName            String
+  email               String   @unique
+  location            String
+  referral            String?
+  roles               String[]
+  primaryLanguage     String?
+  otherLanguage       String?
+  proficiency         String?
+  additionalLanguages String[]
+  contributorNotes    String?
+  validatorNotes      String?
+  testerNotes         String?
+  developerNotes      String?
+  educatorNotes       String?
+  agreedToTerms       Boolean
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
