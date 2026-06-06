@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
   robots: {
     index: true,
     follow: true,
@@ -72,7 +75,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body className="min-h-full overflow-x-hidden bg-white font-body text-on-background">{children}<Analytics /></body>
     </html>

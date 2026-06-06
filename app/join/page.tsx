@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { JoinPioneerForm } from "@/components/forms/join-pioneer-form";
+
+export const metadata: Metadata = {
+  title: "Join the Wika Movement | Founding Member Applications",
+  description:
+    "Apply to become a founding member of Wika. Join as a beta tester, language contributor, validator, or educator partner. Help preserve Philippine languages.",
+};
 
 export default function JoinPage() {
   return (

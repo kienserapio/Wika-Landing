@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { Facebook, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Application Received | Wika PH",
+  description:
+    "You have officially joined the Wika community. Salamat for helping keep Philippine languages alive.",
+  robots: { index: false, follow: false },
+};
 
 type SuccessPageProps = {
   searchParams: Promise<{ firstName?: string }>;
