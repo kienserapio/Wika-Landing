@@ -1,53 +1,124 @@
-import { ArrowRight } from "lucide-react";
+"use client";
 
-import { Button } from "@/components/ui/button";
+import { EmailTesterForm } from "@/components/forms/email-tester-form";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden px-6 pb-20 pt-24 sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-6xl">
-        <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-emerald-900/20 blur-3xl" />
-        <div className="absolute -right-20 top-0 h-80 w-80 rounded-full bg-amber-300/25 blur-3xl" />
-
-        <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-8">
-            <p className="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-800">
-              Wika Pioneer Movement
-            </p>
-            <div className="space-y-5">
-              <h1 className="text-balance text-4xl font-extrabold leading-tight text-slate-900 sm:text-6xl">
-                Master the rhythm of the Philippines.
-              </h1>
-              <p className="max-w-xl text-pretty text-lg leading-relaxed text-slate-700">
-                Wika is building a living language platform where culture, context, and community shape how people
-                learn Philippine languages together.
-              </p>
-            </div>
-            <a href="#join" aria-label="Jump to the onboarding form">
-              <Button className="group text-base" variant="secondary">
-                Join the Movement
-                <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
-              </Button>
-            </a>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 bg-white/90 p-7 shadow-[0_24px_60px_-30px_rgba(15,23,42,0.45)] backdrop-blur">
-            <h2 className="text-lg font-semibold text-slate-900">Why now?</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600">
-              Many Philippine dialects remain underrepresented in modern digital products. Wika starts with people who
-              speak, preserve, and care for these languages every day.
-            </p>
-            <div className="mt-6 space-y-4">
-              <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4 text-sm text-emerald-900">
-                Contributor-first onboarding for native speakers and language educators
-              </div>
-              <div className="rounded-2xl border border-amber-200 bg-amber-50/80 p-4 text-sm text-amber-900">
-                Community validation pipeline to keep translations culturally grounded
-              </div>
-            </div>
+    <header
+      id="hero"
+      className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat lg:h-[900px]"
+      style={{ backgroundImage: "url('/website-bg.png')" }}
+    >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
+        <div className="cloud-sky w-[200%]">
+          <div className="cloud-float flex w-full">
+            <img src="/sky%20clouds.png" alt="" className="w-1/2" />
+            <img src="/sky%20clouds.png" alt="" className="w-1/2" />
           </div>
         </div>
       </div>
-    </section>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
+        <div className="cloud-volcano w-[200%]">
+          <div className="cloud-float flex w-full">
+            <img src="/volcano%20clouds.png" alt="" className="w-1/2" />
+            <img src="/volcano%20clouds.png" alt="" className="w-1/2" />
+          </div>
+        </div>
+      </div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[3]">
+        <img src="/mascot-bg.png" alt="" aria-hidden className="w-full h-full object-cover" />
+      </div>
+      <div className="relative z-10 mx-auto flex h-full w-full flex-col items-center justify-start pt-32 gap-[30px]">
+        <div className="flex w-full flex-col items-center gap-[30px] text-center">
+          <h1
+            className="slide-up-delay-4 self-stretch text-center font-headline text-[72px] leading-[72px] font-extrabold uppercase tracking-[-0.03em] text-[#624185] md:text-[90px] md:leading-[90px] lg:text-[96px] lg:leading-[90px]"
+          >
+            <span className="block">WITH WIKA,</span>
+            <span className="block text-[#FFA345]">WI-KAN!</span>
+          </h1>
+
+          <p className="slide-up-delay-3 w-full max-w-[440px] text-center text-[18px] font-semibold leading-[24px] text-[#5B5B5B]">
+            Speak like a local as you learn, connect, and embody the vibrant heart of Philippine languages.
+          </p>
+
+          <EmailTesterForm className="slide-up-delay-2" />
+        </div>
+
+        <div className="slide-up-phone pb-4 md:pb-8 hover:scale-[1.02] transition-transform duration-300"><PhoneMockup /></div>
+      </div>
+    </header>
+  );
+}
+
+function PhoneMockup() {
+  return (
+    <div className="relative shrink-0" style={{ width: "447.423px", height: "930.233px" }}>
+      {/* Screen area with app screenshot */}
+      <div
+        className="absolute overflow-hidden bg-white"
+        style={{
+          top: "12.74px",
+          left: "15.04px",
+          width: "417.348px",
+          height: "904.757px",
+          borderRadius: "54.976px",
+        }}
+      >
+        <img
+          src="/phone/app-screenshot.png"
+          alt="WIKA App Screenshot"
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
+      {/* Phone frame overlay — evenodd fill creates transparent screen window */}
+      <img
+        src="/phone/phone-frame.svg"
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full pointer-events-none"
+      />
+
+      {/* Dynamic island */}
+      <img
+        src="/phone/dynamic-island.svg"
+        alt=""
+        aria-hidden
+        className="absolute pointer-events-none"
+        style={{ left: "156.89px", top: "26.35px", width: "133.642px", height: "39.558px" }}
+      />
+
+      {/* Left bubble */}
+      <div className="bubble-float-left absolute" style={{ left: "-48.29px", top: "103px" }}>
+        <div style={{ transform: "rotate(-20deg)" }}>
+          <div
+            className="flex items-center justify-center border-[4.856px] border-solid border-white bg-white shadow-[0px_9.711px_32.371px_0px_rgba(0,0,0,0.2)]"
+            style={{
+              width: "92.258px",
+              height: "92.258px",
+              borderRadius: "56.649px",
+            }}
+          >
+            <span className="text-4xl leading-none">🔥</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Right bubble */}
+      <div className="bubble-float-right absolute" style={{ left: "385.61px", top: "180.94px" }}>
+        <div style={{ transform: "rotate(18.6deg)" }}>
+          <div
+            className="flex items-center justify-center border-[3.646px] border-solid border-white bg-white shadow-[0px_7.291px_24.304px_0px_rgba(0,0,0,0.2)]"
+            style={{
+              width: "69.266px",
+              height: "69.266px",
+              borderRadius: "56.649px",
+            }}
+          >
+            <span className="text-2xl leading-none">🇵🇭</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -114,16 +114,12 @@ export async function submitPioneerApplication(
       message: "Application received. Welcome to the Wika founding community.",
     };
   } catch (err) {
-    // Log the error for debugging purposes and return a helpful message during dev.
-    // In production you may want to hide detailed errors.
     // eslint-disable-next-line no-console
     console.error("submitPioneerApplication error:", err);
 
-    const message = err instanceof Error ? err.message : "We could not save your form right now. Please try again.";
-
     return {
       status: "error",
-      message,
+      message: "We could not save your form right now. Please try again.",
     };
   }
 }
