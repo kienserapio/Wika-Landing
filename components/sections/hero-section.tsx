@@ -12,33 +12,33 @@ export function HeroSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
         <div className="cloud-sky w-[200%]">
           <div className="cloud-float flex w-full">
-            <img src="/sky%20clouds.png" alt="" className="w-1/2" />
-            <img src="/sky%20clouds.png" alt="" className="w-1/2" />
+            <img src="/sky%20clouds.png" alt="Floating sky clouds above Wika app hero section" title="Wika app decorative sky clouds" className="w-1/2" />
+            <img src="/sky%20clouds.png" alt="" aria-hidden className="w-1/2" />
           </div>
         </div>
       </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
         <div className="cloud-volcano w-[200%]">
           <div className="cloud-float flex w-full">
-            <img src="/volcano%20clouds.png" alt="" className="w-1/2" />
-            <img src="/volcano%20clouds.png" alt="" className="w-1/2" />
+            <img src="/volcano%20clouds.png" alt="Volcano clouds drifting across Wika app hero" title="Wika app decorative volcano clouds" className="w-1/2" />
+            <img src="/volcano%20clouds.png" alt="" aria-hidden className="w-1/2" />
           </div>
         </div>
       </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[3]">
-        <img src="/mascot-bg.png" alt="" aria-hidden className="w-full h-full object-cover" />
+        <img src="/mascot-bg.png" alt="" aria-hidden className="w-full h-full object-cover" title="" />
       </div>
-      <div className="relative z-10 mx-auto flex h-full w-full flex-col items-center justify-start pt-32 gap-[30px]">
+      <div className="relative z-10 mx-auto flex h-full w-full flex-col items-center justify-start pt-32 gap-[30px] px-6">
         <div className="flex w-full flex-col items-center gap-[30px] text-center">
           <h1
-            className="slide-up-delay-4 self-stretch text-center font-headline text-[72px] leading-[72px] font-extrabold uppercase tracking-[-0.03em] text-[#624185] md:text-[90px] md:leading-[90px] lg:text-[96px] lg:leading-[90px]"
+            className="slide-up-delay-4 self-stretch text-center font-headline text-[72px] leading-[72px] font-extrabold tracking-[-0.02em] text-[#624185] md:text-[90px] md:leading-[90px] lg:text-[96px] lg:leading-[90px]"
           >
-            <span className="block">WITH WIKA,</span>
-            <span className="block text-[#FFA345]">WI-KAN!</span>
+            <span className="block">Learn Filipino</span>
+            <span className="block text-[#FFA345]">Languages!</span>
           </h1>
 
           <p className="slide-up-delay-3 w-full max-w-[440px] text-center text-[18px] font-semibold leading-[24px] text-[#5B5B5B]">
-            Speak like a local as you learn, connect, and embody the vibrant heart of Philippine languages.
+            Speak like a local as you learn, connect, and embody the diverse culture of the Philippines.
           </p>
 
           <EmailTesterForm className="slide-up-delay-2" />
@@ -67,6 +67,7 @@ function PhoneMockup() {
         <img
           src="/phone/app-screenshot.png"
           alt="WIKA App Screenshot"
+          title="WIKA App Preview — Learn Philippine Languages"
           className="w-full h-full object-cover object-top"
         />
       </div>
@@ -115,7 +116,7 @@ function PhoneMockup() {
               borderRadius: "56.649px",
             }}
           >
-            <span className="text-2xl leading-none">🇵🇭</span>
+            <img src="flags/Filipino Icon.png" alt="Philippines flag" className="h-[24px] w-[32px] leading-none" />
           </div>
         </div>
       </div>

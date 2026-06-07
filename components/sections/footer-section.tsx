@@ -28,7 +28,7 @@ export function FooterSection() {
             <p className="font-bold text-[#624185] text-[20px] md:text-[17px] tracking-[-0.2318px] leading-normal">
               Our Courses
             </p>
-            {["Filipino", "Cebuano", "Ilocano", "Hiligaynon", "Asi"].map((lang) => (
+            {["Learn Filipino", "Learn Cebuano", "Learn Ilocano", "Learn Hiligaynon", "Learn Asi"].map((lang) => (
               <p key={lang} className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">
                 {lang}
               </p>
@@ -65,7 +65,8 @@ export function FooterSection() {
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <img
                   src="/footer/logo.png"
-                  alt="Wika"
+                  alt="Wika logo"
+                  title="WIKA — Preserving Philippine Languages"
                   className="absolute max-w-none"
                   style={{ height: "555%", left: "-43.5%", top: "-198.33%", width: "290.2%" }}
                 />
@@ -73,9 +74,12 @@ export function FooterSection() {
             </div>
           </div>
 
-          <p className="font-normal text-[#a5a5a5] text-[14px] text-center tracking-[-0.2045px] leading-normal">
-            &copy; 2026 Wika PH Inc. Made for Filipino Languages
-          </p>
+        <p className="font-normal text-[#a5a5a5] text-[14px] text-center tracking-[-0.2045px] leading-normal">
+          &copy; 2026 WIKA PH Inc. All rights reserved. Contact us at{" "}
+          <a href="mailto:marketing@wikaph.com" className="font-bold text-[#a5a5a5] hover:underline">
+            marketing@wikaph.com.
+          </a>
+        </p>
 
           <div className="flex gap-4 md:gap-6 items-center justify-center shrink-0">
             <a href="https://facebook.com/WikaPhilippines" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-70 hover:opacity-100 transition-opacity">

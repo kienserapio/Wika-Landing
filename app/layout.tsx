@@ -5,30 +5,55 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Wika PH | Learn Tagalog, Cebuano, Ilocano & Philippine Languages",
   description:
-    "Learn Tagalog, Cebuano, Ilocano, Hiligaynon, and Asi with Wika. Connect with your roots, practice everyday culture, and speak like a true Filipino local. Start your heritage journey today. Join the waitlist!",
-  keywords: [
-    "learn philippine languages",
-    "philippine language learning app",
-    "best app to learn tagalog",
-    "speak like a local philippines",
-    "interactive filipino lessons",
-    "how to speak cebuano fluently",
-    "learn ilocano phrases online",
-    "hiligaynon conversation practice",
-    "asi language learning track",
-    "bisaya vocabulary for beginners",
-    "philippine language app for tourists",
-    "filipino heritage language learning",
-    "philippine dialect training for kids",
-    "tagalog conversation app for seniors",
-    "business language localization philippines",
-  ],
+    "Learn Tagalog, Cebuano, Ilocano, Hiligaynon, and Asi with Wika. Connect with your roots, practice everyday culture, and speak like a true Filipino local.",
+keywords: [
+  // --- Simple & High Volume ---
+  "learn tagalog",
+  "learn bisaya",
+  "learn ilocano",
+  "learn hiligaynon",
+  "tagalog app",
+  "speak tagalog",
+  "filipino language app",
+  "philippine languages",
+  
+  "learn philippine languages",
+  "philippine language learning app",
+  "best app to learn tagalog",
+  "speak like a local philippines",
+  "interactive filipino lessons",
+  "how to speak cebuano fluently",
+  "learn ilocano phrases online",
+  "hiligaynon conversation practice",
+  "asi language learning track",
+  "bisaya vocabulary for beginners",
+  "philippine language app for tourists",
+  "filipino heritage language learning",
+  "philippine dialect training for kids",
+  "tagalog conversation app for seniors",
+  "business language localization philippines",
+
+  "tagalog slang phrases",
+  "conversational tagalog",
+  "how to speak taglish",
+  "speak like a filipino",
+  "everyday tagalog phrases",
+  
+  "learn tagalog for filam",
+  "filipino roots language",
+  "reconnect with filipino culture",
+  "survival tagalog phrases",
+  "philippines travel language guide",
+  "basic bisaya for tourists",
+  "how to order food in tagalog"
+],
   metadataBase: new URL("https://wikaph.com"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.wikaph.com/",
   },
   icons: {
     icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   robots: {
     index: true,
@@ -39,7 +64,7 @@ export const metadata: Metadata = {
     url: "https://wikaph.com",
     title: "Wika PH | Learn Tagalog, Cebuano, Ilocano & Philippine Languages",
     description:
-      "Learn Tagalog, Cebuano, Ilocano, Hiligaynon, and Asi with Wika. Connect with your roots, practice everyday culture, and speak like a true Filipino local. Start your heritage journey today. Join the waitlist!",
+      "Learn Tagalog, Cebuano, Ilocano, Hiligaynon, and Asi with Wika. Connect with your roots, practice everyday culture, and speak like a true Filipino local.",
     images: [
       {
         url: "/og-image.png",

@@ -54,7 +54,7 @@ export function LanguageBanner() {
             key={name}
             className="snap-start shrink-0 flex items-center gap-3 px-4 py-2 rounded-lg font-bold text-[15px] text-neutral-600 hover:bg-neutral-100 hover:text-neutral-800 transition-colors whitespace-nowrap tracking-[0.8px]"
           >
-            <img src={flag} alt="" className="w-9 h-8 object-cover rounded-md" />
+            <img src={flag} alt={`${name} flag icon`} title={`${name} language flag`} className="w-9 h-8 object-cover rounded-md" />
             {name}
           </button>
         ))}

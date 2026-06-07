@@ -25,6 +25,7 @@ function CTAPhone() {
         <img
           src="/phone/app-screenshot-cta.png"
           alt="WIKA App Screenshot"
+          title="Join WIKA — Learn Philippine Languages"
           className="w-full h-full object-cover object-top"
         />
       </div>

@@ -18,11 +18,11 @@ export function NavigationBar() {
   return (
     <nav 
       className={`fixed top-0 z-50 mx-auto flex w-full items-center justify-between px-6 py-4 md:px-12 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-md" : "bg-transparent"
+        isScrolled ? "backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="flex items-center">
-        <img src="/navlogo.png" alt="WIKA" className="h-8 md:h-10" />
+        <img src="/navlogo.png" alt="WIKA logo" title="WIKA — Learn Philippine Languages" className="h-8 md:h-10" />
       </div>
       <div className="flex items-center gap-4">
         <Button

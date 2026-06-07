@@ -23,7 +23,7 @@ export default async function SuccessPage({ searchParams }: SuccessPageProps) {
   return (
     <main className="min-h-screen bg-white px-6 py-14">
       <section className="mx-auto w-full max-w-3xl rounded-3xl border border-surface-border bg-white p-8 text-center shadow-[0_20px_60px_-35px_rgba(15,23,42,0.4)] sm:p-10">
-        <img src="/Mascot.png" alt="Wika Mascot" className="mx-auto h-24 w-auto sm:h-28" />
+        <img src="/Mascot.png" alt="Wika mascot character" title="Wika Mascot — Philippine languages learning app" className="mx-auto h-24 w-auto sm:h-28" />
 
         <h1 className="mt-4 font-headline text-3xl font-black text-primary sm:text-5xl">You&apos;re In, {firstName}!</h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-on-background/75 sm:text-base">

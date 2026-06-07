@@ -31,11 +31,13 @@ function CTALink({ label }: { label: string }) {
 
 function PhonePanel({
   screenSrc,
+  screenAlt,
   cardContent,
   mascot,
   centeredOnDesktop,
 }: {
   screenSrc: string;
+  screenAlt?: string;
   cardContent: React.ReactNode;
   mascot?: React.ReactNode;
   centeredOnDesktop?: boolean;
@@ -69,7 +71,7 @@ function PhonePanel({
           className="absolute"
           style={{ left: "212px", top: "40px", width: "300px", height: "471px", ...maskStyle }}
         >
-          <img src={screenSrc} alt="" className="absolute inset-0 w-full h-full" />
+          <img src={screenSrc} alt={screenAlt ?? ""} title={screenAlt ?? ""} className="absolute inset-0 w-full h-full" />
         </div>
         {cardContent}
         {mascot}
@@ -92,10 +94,11 @@ export function FeaturesSection() {
 
           {/* Sub Section 1 – Dialecto */}
           <div className="flex flex-col lg:flex-row h-auto lg:h-[542px] items-center lg:max-h-[542px] overflow-clip relative rounded-[28px] w-full bg-white lg:gap-10">
-            <div className="w-full lg:w-auto h-[450px] md:h-[500px] lg:h-full lg:flex-1 overflow-clip relative shrink-0 group">
+            <div className="w-full lg:w-auto h-[450px] md:h-[500px] lg:h-full lg:flex-1 overflow-clip lg:overflow-visible relative shrink-0 group">
               <PhonePanel
                 centeredOnDesktop
                 screenSrc="/features/screen-feed.png"
+                screenAlt="Wika app feed screen showing language learning feed"
                 cardContent={
                   <div
                     className="absolute bg-white border border-[#e5e5e5] flex flex-col items-center justify-center overflow-clip rounded-[10.829px] shadow-[0px_4px_0px_0px_#e5e5e5,0px_0.935px_20px_0px_rgba(0,0,0,0.06)] -translate-x-1/2"
@@ -106,6 +109,7 @@ export function FeaturesSection() {
                         <img
                           src="/features/screenshot-feed.png"
                           alt="App feed screenshot"
+                          title="WIKA language learning feed"
                           className="absolute w-full max-w-none left-0"
                           style={{ height: "277.38%", top: "-145.73%" }}
                         />
@@ -115,7 +119,7 @@ export function FeaturesSection() {
                 }
                 mascot={
                   <div className="absolute" style={{ left: "434px", width: "229px", height: "229px", top: "291px" }}>
-                    <img src="/features/mascot.svg" alt="Dialecto mascot" className="absolute inset-0 w-full h-full" />
+                    <img src="/features/mascot.svg" alt="Dialecto conversational AI mascot" title="Dialecto — WIKA AI language companion" className="absolute inset-0 w-full h-full" />
                   </div>
                 }
               />
@@ -141,6 +145,7 @@ export function FeaturesSection() {
             <div className="w-full lg:w-auto h-[450px] md:h-[500px] lg:h-full lg:flex-1 overflow-clip relative shrink-0 group">
               <PhonePanel
                 screenSrc="/features/screen-circles.png"
+                screenAlt="Wika app language learning loop screen"
                 cardContent={
                   <div
                     className="absolute bg-white border border-[#e5e5e5] flex flex-col items-center justify-center overflow-clip rounded-[10.829px] shadow-[0px_4px_0px_0px_#e5e5e5,0px_0.935px_20px_0px_rgba(0,0,0,0.06)] -translate-x-1/2"
@@ -151,6 +156,7 @@ export function FeaturesSection() {
                         <img
                           src="/features/screenshot-language.png"
                           alt="Language selection screenshot"
+                          title="WIKA personalized learning loop language picker"
                           className="absolute max-w-none"
                           style={{ width: "100%", height: "392.42%", left: "-0.01%", top: "-151.26%" }}
                         />
@@ -207,6 +213,7 @@ export function FeaturesSection() {
               <PhonePanel
                 centeredOnDesktop
                 screenSrc="/features/screen-map.png"
+                screenAlt="Wika app community map screen showing gamified progression"
                 cardContent={
                   <div
                     className="absolute bg-white border border-[#e1e1e1] drop-shadow-[0px_0.935px_10px_rgba(0,0,0,0.06)] flex items-center justify-center overflow-clip rounded-[10.829px] -translate-x-1/2 -translate-y-1/2"
@@ -217,6 +224,7 @@ export function FeaturesSection() {
                         <img
                           src="/features/screenshot-community.png"
                           alt="Community screenshot"
+                          title="WIKA gamified community progression screen"
                           className="absolute max-w-none"
                           style={{ height: "165.81%", left: "-0.26%", top: "-35.28%", width: "100%" }}
                         />
@@ -329,7 +337,8 @@ export function FeaturesSection() {
                 <img
                   src="/features/classroom-bg.png"
                   alt="Classroom learning system"
-                  className="w-full h-full object-cover"
+                  title="WIKA classroom for education and enterprise"
+                  className="w-full h-full object-cover object-top"
                   style={{ minHeight: "300px" }}
                 />
               </div>
