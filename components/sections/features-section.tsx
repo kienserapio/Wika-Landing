@@ -333,7 +333,7 @@ export function FeaturesSection() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 group-hover:scale-[1.02] transition-transform duration-300">
-              <div className="wika-shadow relative overflow-hidden rounded-3xl bg-on-background">
+              <div className="relative overflow-hidden rounded-3xl bg-on-background">
                 <img
                   src="/features/classroom-bg.png"
                   alt="Classroom learning system"
