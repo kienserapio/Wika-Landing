@@ -259,7 +259,7 @@ export function JoinPioneerForm() {
 
       <section className={`${step === 2 ? "mt-8 block wika-step-fade" : "hidden"}`}>
         <h2 className="font-headline text-xl font-extrabold text-primary">How would you like to contribute?</h2>
-        <p className="mt-2 text-sm text-on-background/70">
+        <p className="mt-2 text-sm text-[#A5A5A5]">
           Select all that apply - your selections help us tailor your onboarding and ensure your skills go where
           they&apos;re needed most.
         </p>
@@ -291,7 +291,7 @@ export function JoinPioneerForm() {
                     <span className="text-xl leading-none">{entry.emoji}</span>
                     <div>
                       <p className="font-bold text-on-background">{entry.title}</p>
-                      <p className="mt-1 text-sm text-on-background/70">{entry.description}</p>
+                      <p className="mt-1 text-sm text-[#A5A5A5]">{entry.description}</p>
                     </div>
                   </div>
                   <span className="rounded-full bg-secondary/15 px-3 py-1 text-xs font-black uppercase tracking-wider text-secondary-dark">
@@ -420,25 +420,25 @@ export function JoinPioneerForm() {
             <div className="mt-4 space-y-4">
               <div>
                 <p className="font-bold text-on-background">🏅 Founding Member Badge</p>
-                <p className="text-sm text-on-background/70">
+                <p className="text-sm text-[#A5A5A5]">
                   A permanent, verified badge on your Wika profile that marks you as one of the original builders of this movement.
                 </p>
               </div>
               <div>
                 <p className="font-bold text-on-background">🗳️ Direct Product Input</p>
-                <p className="text-sm text-on-background/70">
+                <p className="text-sm text-[#A5A5A5]">
                   Vote on the features we build next. Your feedback directly shapes our roadmap - no committee, no filter.
                 </p>
               </div>
               <div>
                 <p className="font-bold text-on-background">🔔 First Access to Beta</p>
-                <p className="text-sm text-on-background/70">
+                <p className="text-sm text-[#A5A5A5]">
                   Skip the public waitlist. Contributors and validators are onboarded in priority batches before our public launch.
                 </p>
               </div>
               <div>
                 <p className="font-bold text-on-background">🤝 Contributor Recognition</p>
-                <p className="text-sm text-on-background/70">
+                <p className="text-sm text-[#A5A5A5]">
                   Language contributors and validators are credited within the app and in our public community acknowledgments.
                 </p>
               </div>

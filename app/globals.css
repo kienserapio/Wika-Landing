@@ -223,3 +223,32 @@ body {
 .tester-btn-emerge {
   animation: tester-btn-emerge 480ms cubic-bezier(.2,.9,.3,1) both;
 }
+
+@keyframes loading-dot {
+  0%, 80%, 100% { transform: scale(0.4); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.loading-dot {
+  animation: loading-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.2); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.animate-pop {
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes lang-screen-slide {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.lang-screen-slide-up {
+  animation: lang-screen-slide 550ms cubic-bezier(.22,.9,.26,1) both;
+}

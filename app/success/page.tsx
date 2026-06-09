@@ -57,7 +57,7 @@ export default async function SuccessPage({ searchParams }: SuccessPageProps) {
         </div>
 
         <div className="mt-8">
-          <p className="text-sm font-semibold text-on-background/70">Help more Filipinos find Wika - share the movement:</p>
+          <p className="text-sm font-semibold text-[#A5A5A5]">Help more Filipinos find Wika - share the movement:</p>
           <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               asChild
