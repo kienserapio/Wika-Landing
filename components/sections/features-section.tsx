@@ -99,7 +99,7 @@ const LANG_SCREENS = [
   "/features/lang-asi.png",
 ];
 
-function LanguageSelectorShowcase() {
+export function LanguageSelectorShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const screenMaskStyle: React.CSSProperties = {
