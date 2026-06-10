@@ -10,51 +10,48 @@ export function FooterSection() {
             <p className="font-bold text-[#624185] text-[20px] md:text-[17px] tracking-[-0.2318px] leading-normal">
               About Wika
             </p>
-            <p className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">
+            <a href="/about" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">
               Overview
-            </p>
-            <p className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal whitespace-nowrap cursor-pointer hover:text-[#624185] transition-colors">
+            </a>
+            <a href="/about/team" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal whitespace-nowrap cursor-pointer hover:text-[#624185] transition-colors">
               Team
-            </p>
-            <p className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal whitespace-nowrap cursor-pointer hover:text-[#624185] transition-colors">
+            </a>
+            <a href="/about/mission" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal whitespace-nowrap cursor-pointer hover:text-[#624185] transition-colors">
               Mission
-            </p>
-            <p className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal whitespace-nowrap cursor-pointer hover:text-[#624185] transition-colors">
+            </a>
+            <a href="/contact" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal whitespace-nowrap cursor-pointer hover:text-[#624185] transition-colors">
               Contact Us
-            </p>
+            </a>
           </div>
 
           <div className="flex flex-col gap-5 items-start overflow-hidden">
             <p className="font-bold text-[#624185] text-[20px] md:text-[17px] tracking-[-0.2318px] leading-normal">
               Our Courses
             </p>
-            {["Learn Filipino", "Learn Cebuano", "Learn Ilocano", "Learn Hiligaynon", "Learn Asi"].map((lang) => (
-              <p key={lang} className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">
-                {lang}
-              </p>
-            ))}
+            <a href="/courses/filipino" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Learn Filipino</a>
+            <a href="/courses/cebuano" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Learn Cebuano</a>
+            <a href="/courses/ilocano" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Learn Ilocano</a>
+            <a href="/courses/hiligaynon" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Learn Hiligaynon</a>
+            <a href="/courses/asi" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Learn Asi</a>
           </div>
 
           <div className="flex flex-col gap-5 items-start overflow-hidden">
             <p className="font-bold text-[#624185] text-[20px] md:text-[17px] tracking-[-0.2318px] leading-normal">
               Our Products
             </p>
-            {["Wika App", "Wika Translator", "Wika for Business", "Wika for Education"].map((product) => (
-              <p key={product} className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">
-                {product}
-              </p>
-            ))}
+            <a href="/products/mobile" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Wika App</a>
+            <a href="/products/translator" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Wika Translator</a>
+            <a href="/business" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Wika for Business</a>
+            <a href="/education" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Wika for Education</a>
           </div>
 
           <div className="flex flex-col gap-5 items-start overflow-hidden">
             <p className="font-bold text-[#624185] text-[20px] md:text-[17px] tracking-[-0.2318px] leading-normal">
               Our Company
             </p>
-            {["Updates", "FAQs", "Partnerships"].map((item) => (
-              <p key={item} className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">
-                {item}
-              </p>
-            ))}
+            <a href="/updates" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Updates</a>
+            <a href="/faqs" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">FAQs</a>
+            <a href="/partnerships" className="font-bold text-[#a5a5a5] text-[15px] tracking-[-0.2045px] leading-normal cursor-pointer hover:text-[#624185] transition-colors">Partnerships</a>
           </div>
         </div>
 

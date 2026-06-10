@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 function SectionHeader({ title, subtitle }: { title: string; subtitle: import("react").ReactNode }) {
@@ -130,7 +130,7 @@ function LanguageSelectorShowcase() {
           style={{ top: "43px", width: "728px", height: "728px" }}
         >
           <div
-            className="absolute flex flex-col gap-[10px] items-center justify-center bg-white border border-[#e5e5e5] overflow-clip rounded-[10.829px] shadow-[0px_4px_0px_0px_#e5e5e5,0px_0.935px_20px_0px_rgba(0,0,0,0.06)]"
+            className="absolute flex flex-col gap-[10px] items-center justify-center bg-white border border-[#e5e5e5] rounded-[10.829px] shadow-[0px_4px_0px_0px_#e5e5e5,0px_0.935px_20px_0px_rgba(0,0,0,0.06)]"
             style={{ left: "50%", transform: "translateX(-50%)", top: "55px", width: "364px", height: "420px" }}
           >
             {LANGUAGES.map((lang, i) => {
@@ -367,29 +367,71 @@ function ChatAnimation() {
   );
 }
 
+function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="w-full"
+      style={{
+        opacity: revealed ? 1 : 0,
+        transform: revealed ? "translateY(0)" : "translateY(25px)",
+        transition: `opacity 700ms cubic-bezier(.22,.9,.26,1) ${delay}ms, transform 700ms cubic-bezier(.22,.9,.26,1) ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export function FeaturesSection() {
   return (
     <section className="bg-white flex flex-col gap-12 md:gap-16 items-center py-16 md:py-24 w-full overflow-x-hidden">
       <div className="flex flex-col gap-6 items-center w-full max-w-[1196px] px-4 md:px-6">
 
-        <SectionHeader
-          title="Connect with the Philippine Languages"
-          subtitle={<>Learn with high-quality, structured courses for <strong className="font-bold text-[#ffa345]">Tagalog, Cebuano, Ilocano, Hiligaynon, and Asi</strong>. Our platform provides culturally accurate lessons that capture the precise tone, history, and life of each community.</>}
-        />
-
-        <LanguageSelectorShowcase />
-
-        <div className="flex flex-col gap-12 items-center w-full text-center mt-16 md:mt-24 mb-10 md:mb-16">
+        <ScrollReveal delay={0}>
           <SectionHeader
-            title="Learn Language as an Experience"
-            subtitle={<>Designed for <strong className="font-bold text-[#ffa345]">Individual Learners, Tourists, and Cultural Enthusiasts.</strong></>}
+            title="Connect with the Philippine Languages"
+            subtitle={<>Learn with high-quality, structured courses for <strong className="font-bold text-[#ffa345]">Tagalog, Cebuano, Ilocano, Hiligaynon, and Asi</strong>. Our platform provides culturally accurate lessons that capture the precise tone, history, and life of each community.</>}
           />
-        </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0}>
+          <LanguageSelectorShowcase />
+        </ScrollReveal>
+
+        <ScrollReveal           delay={50}>
+          <div className="flex flex-col gap-12 items-center w-full text-center mt-16 md:mt-24 mb-10 md:mb-16">
+            <SectionHeader
+              title="Learn Language as an Experience"
+              subtitle={<>Designed for <strong className="font-bold text-[#ffa345]">Individual Learners, Tourists, and Cultural Enthusiasts.</strong></>}
+            />
+          </div>
+        </ScrollReveal>
 
         <div className="flex flex-col gap-8 md:gap-36 items-start w-full">
 
           {/* Sub Section 1 – Dialecto */}
-          <div className="flex flex-col lg:flex-row h-auto lg:h-[542px] items-center lg:max-h-[542px] overflow-clip relative rounded-[28px] w-full bg-white lg:gap-10">
+          <ScrollReveal delay={60}>
+            <div className="flex flex-col lg:flex-row h-auto lg:h-[542px] items-center lg:max-h-[542px] overflow-clip relative rounded-[28px] w-full bg-white lg:gap-10">
             <div className="w-full lg:w-auto h-[450px] md:h-[500px] lg:h-full lg:flex-1 overflow-clip lg:overflow-visible relative shrink-0 group">
               <PhonePanel
                 centeredOnDesktop
@@ -434,10 +476,12 @@ export function FeaturesSection() {
               </div>
               <CTALink label="Sign up to be a tester" />
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
           {/* Sub Section 2 – Learning Loop */}
-          <div className="flex flex-col lg:flex-row-reverse h-auto lg:h-[542px] items-center lg:max-h-[542px] relative rounded-[28px] w-full bg-white">
+          <ScrollReveal delay={90}>
+            <div className="flex flex-col lg:flex-row-reverse h-auto lg:h-[542px] items-center lg:max-h-[542px] relative rounded-[28px] w-full bg-white">
             <div className="w-full lg:w-auto h-[450px] md:h-[500px] lg:h-full lg:flex-1 overflow-clip relative shrink-0 group">
               <PhonePanel
                 screenSrc="/features/screen-circles.png"
@@ -476,10 +520,12 @@ export function FeaturesSection() {
               </div>
               <LearningLoopAnimation />
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
           {/* Sub Section 3 – Gamified */}
-          <div className="flex flex-col lg:flex-row h-auto lg:h-[542px] items-center lg:max-h-[542px] overflow-clip relative rounded-[28px] w-full bg-white lg:gap-10">
+          <ScrollReveal delay={120}>
+            <div className="flex flex-col lg:flex-row h-auto lg:h-[542px] items-center lg:max-h-[542px] overflow-clip relative rounded-[28px] w-full bg-white lg:gap-10">
             <div className="w-full lg:w-auto h-[450px] md:h-[500px] lg:h-full lg:flex-1 overflow-clip relative shrink-0 group">
               <PhonePanel
                 centeredOnDesktop
@@ -522,21 +568,25 @@ export function FeaturesSection() {
               <CTALink label="Claim your pioneer rank now" />
             </div>
           </div>
+          </ScrollReveal>
         </div>
 
         {/* ── Section 2 Header ── */}
-        <div className="flex flex-col gap-12 items-center w-full text-center mt-16 md:mt-24 mb-10 md:mb-16">
-          <SectionHeader
-            title="Wika for Business &amp; Education"
-            subtitle={<>Designed for <strong className="font-bold text-[#ffa345]">Corporate Teams, Institutions, and Global Workforces.</strong></>}
-          />
-        </div>
+        <ScrollReveal delay={160}>
+          <div className="flex flex-col gap-12 items-center w-full text-center mt-16 md:mt-24 mb-10 md:mb-16">
+            <SectionHeader
+              title="Wika for Business &amp; Education"
+              subtitle={<>Designed for <strong className="font-bold text-[#ffa345]">Corporate Teams, Institutions, and Global Workforces.</strong></>}
+            />
+          </div>
+        </ScrollReveal>
 
         {/* ── Business Section ── */}
         <div className="flex flex-col gap-10 w-full">
 
           {/* API Translation */}
-          <div className="group wika-shadow-white flex flex-col items-center gap-12 rounded-[40px] border border-surface-border bg-white p-8 md:p-16 lg:flex-row">
+          <ScrollReveal delay={200}>
+            <div className="group wika-shadow-white flex flex-col items-center gap-12 rounded-[40px] border border-surface-border bg-white p-8 md:p-16 lg:flex-row">
             <div className="flex flex-col gap-8 lg:w-1/2">
               <span className="inline-block rounded-full bg-primary px-4 py-1 font-label text-xs font-black tracking-widest text-white uppercase self-start">
                 Enterprise Solution
@@ -578,10 +628,12 @@ export function FeaturesSection() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
           {/* Classroom Learning */}
-          <div className="group wika-shadow-white flex flex-col items-center gap-12 rounded-[40px] border border-surface-border bg-white p-8 md:p-16 lg:flex-row-reverse">
+          <ScrollReveal delay={250}>
+            <div className="group wika-shadow-white flex flex-col items-center gap-12 rounded-[40px] border border-surface-border bg-white p-8 md:p-16 lg:flex-row-reverse">
             <div className="flex flex-col gap-8 lg:w-1/2">
               <span className="inline-block rounded-full bg-primary px-4 py-1 font-label text-xs font-black tracking-widest text-white uppercase self-start">
                 Education Solution
@@ -614,10 +666,12 @@ export function FeaturesSection() {
                 />
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
           {/* Workplace Translation */}
-          <div className="group wika-shadow-white flex flex-col items-center gap-12 rounded-[40px] border border-surface-border bg-white p-8 md:p-16 lg:flex-row">
+          <ScrollReveal delay={300}>
+            <div className="group wika-shadow-white flex flex-col items-center gap-12 rounded-[40px] border border-surface-border bg-white p-8 md:p-16 lg:flex-row">
             <div className="flex flex-col gap-8 lg:w-1/2">
               <span className="inline-block rounded-full bg-primary px-4 py-1 font-label text-xs font-black tracking-widest text-white uppercase self-start">
                 Workplace Solution
@@ -644,7 +698,8 @@ export function FeaturesSection() {
                 <ChatAnimation />
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
         </div>
 

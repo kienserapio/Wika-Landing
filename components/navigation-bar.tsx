@@ -22,7 +22,9 @@ export function NavigationBar() {
       }`}
     >
       <div className="flex items-center">
-        <img src="/navlogo.png" alt="WIKA logo" title="WIKA — Learn Philippine Languages" className="h-8 md:h-10" />
+        <Link href="/" scroll={false} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <img src="/navlogo.png" alt="WIKA logo" title="WIKA — Learn Philippine Languages" className="h-8 md:h-10" />
+        </Link>
       </div>
       <div className="flex items-center gap-4">
         <Button

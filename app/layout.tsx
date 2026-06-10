@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { LenisProvider } from "@/components/lenis-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -101,7 +102,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full overflow-x-hidden bg-white font-body text-on-background">{children}<Analytics /></body>
+      <body className="min-h-full overflow-x-hidden bg-white font-body text-on-background"><LenisProvider>{children}</LenisProvider><Analytics /></body>
     </html>
   );
 }
